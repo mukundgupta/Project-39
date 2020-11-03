@@ -58,11 +58,7 @@ class Game{
                        players[index].visible=false;
   
                     
-                         textSize(25);
-                         fill("white");
-                         text(allPlayers.player1.name + "'s Score:"+allPlayers.player1.score,50,50);
-                        text(allPlayers.player2.name + "'s Score:" + allPlayers.player2.score, 50, 100);
-                 
+                                          
                  }
                 
                 

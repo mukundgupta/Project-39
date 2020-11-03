@@ -34,7 +34,7 @@ function setup() {
 
 function draw() {
   background(back_img);
-  
+  console.log(gameState)
    if (playerCount === 2) {
      game.update(1);
    }

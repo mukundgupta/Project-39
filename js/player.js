@@ -23,7 +23,7 @@ class Player {
         database.ref(playerIndex).set({
             name: this.name,
             distance: this.distance,
-            score:this.score
+            
         });
     }
 

@@ -3,7 +3,7 @@ var back_img;
 var gameState =0;
 var playerCount = 0;
 var allPlayers;
-
+var M = 500;
 var player, form,game;
 var player1,player2;
 var players;
@@ -34,13 +34,20 @@ function setup() {
 
 function draw() {
   background(back_img);
-  console.log(gameState)
+  
    if (playerCount === 2) {
      game.update(1);
    }
    if (gameState === 1) {
      clear(); 
      game.play();
+     if(keyDown("RIGHT_ARROW")){
+      M = M+10;
+  }
+  if(keyDown("LEFT_ARROW")){
+    M = M-10;
+}
+  console.log(M)
    }
    if (gameState === 2) {
     

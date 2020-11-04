@@ -36,7 +36,6 @@ class Game{
         }
     
     play(){
-        
                 form.hide();
 
                 Player.getPlayerInfo();
@@ -52,13 +51,17 @@ class Game{
                      y=500;
 
                     
-                     
-                     players[index -1].x =mouseX;
+                     players[index -1].depth = players[index -1].depth+10;
+                     players[index -1].x =M;
                      players[index - 1].y = y;
-                       players[index].visible=false;
+                       //players[index].visible=false;
   
-                    
-                                          
+                    textSize(30)
+                    fill("black")
+                   
+                         text(""+player.name,M-30,y+21)
+                         
+                 
                  }
                 
                 
@@ -90,7 +93,7 @@ class Game{
                       for(var i = 0; i< fruitGroup.length;i++){
                           if(fruitGroup.get(i).isTouching(players)){
                             fruitGroup.get(i).destroy();
-                            
+                            player.score =player.score+1;
                             player.update();
                           }
                        
